@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Day {{day}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style_test.css/">
+</head>
+
+<body onload="getData()">
+    <nav class="nav justify-content-center fixed-top navbar-light bg-light">
+        <a class="nav-link active" aria-current="page" href="/">home</a>
+        <a class="nav-link" href="/vocabook">Voca Book</a>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="fw-bold fs-5">Day {{day}}</h1>
+        <div class="row">
+            <div class="col text-center">
+                <div class="col text-center">
+                    <h1 id="topic" class="fw-bold fs-1"></h1> <svg id="readButton" type="button" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <button type="button" class="btn btn-dark custom-button click_ans" onclick="getData()" id="context0"></button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-dark custom-button click_ans" onclick="getData()" id="context1"></button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-dark custom-button click_ans" onclick="getData()" id="context2"></button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-dark custom-button click_ans" onclick="getData()" id="context3"></button>
+          </div>
+        </div>
+      </div>
+    <div class="container mt-5">
+        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-danger me-md-2 btn-lg click_ans" onclick="getData()">skip</button> 
+        </div>
+        <br>
+        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div id="now_bar" class="progress-bar progress-bar-striped progress-bar-animated"></div>
+          </div>
+    </div>
+    <footer>
+        <p>2023-12-06 Sim SB</p>
+        <p>based of TOEIC VOCA</p>
+    </footer>
+    
+</body>
+<script>
+    day_num="{{day}}";
+</script>
+<script src="/static/js/script_test.js"></script>
+</script>
+</html>
